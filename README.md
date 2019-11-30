@@ -25,7 +25,6 @@ Este repositório contém um exemplo de uma aplicação simples de ecommerce em 
 		minikube -p microservico service graphql-deployment --url
 		minikube -p microservico service stock-deployment --url
 
-	--------------------------------------------------
 ## Rabbit ##
 		Install Helm 
 			curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh
