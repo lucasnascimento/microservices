@@ -1,3 +1,6 @@
+Este repositório contém um exemplo de uma aplicação em microserviço. A aplicação contém 3 projetos, sendo um deles utilizando o graphql como pi gatewai. Os outros dois, um deles em kotlin e o outro em Java. Ambos usam o SpringBoot. Para executar os comandos abaixo deve-se, antes, instalar o minikube localmente no computador:
+	- https://kubernetes.io/docs/tasks/tools/install-minikube/
+
 # Kubernets
 
 	Inicia minikube: 
@@ -45,11 +48,9 @@
 
 # SpringBoot
 
-		kubectl apply -f rabbitmq.yaml
-		kubectl apply -f stock.yaml
-		kubectl apply -f ecommerce.yaml
-		kubectl apply -f graphql.yaml
-		kubectl apply -f rabbitmq.yaml
+		kubectl apply -f kubernets/stock.yaml
+		kubectl apply -f kubernetsecommerce.yaml
+		kubectl apply -f kubernets/graphql.yaml
 
 # Extras:
 		Log
