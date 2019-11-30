@@ -1,8 +1,7 @@
 # Workshop Microserviços com kubernets #
 
-Este repositório contém um exemplo de uma aplicação em microserviço. A aplicação contém 3 projetos, sendo um deles utilizando o graphql como pi gatewai. Os outros dois, um deles em kotlin e o outro em Java. Ambos usam o SpringBoot. Para executar os comandos abaixo deve-se, antes, instalar o minikube localmente no computador:
-	- https://kubernetes.io/docs/tasks/tools/install-minikube/
-
+Este repositório contém um exemplo de uma aplicação simples de ecommerce em microserviço. A aplicação contém 3 projetos. O primeiro se cham graphql e utiliza o [Graphql](https://graphql.org/) como uma [Api Gatewai](https://microservices.io/patterns/apigateway.html). Os outros dois, um deles em kotlin chamado stock e o outro em Java que é o ecommerce. Ambos usam o SpringBoot. O projeto utiliza o [RabbitMq](https://www.rabbitmq.com/) para gerenciar a troca de mensagens entre os serviços. Para executar os comandos abaixo deve-se, antes, instalar o [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) localmente no computador:
+	
 ## Kubernets ##
 
 	Inicia minikube: 
