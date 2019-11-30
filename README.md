@@ -1,7 +1,9 @@
+# Workshop Microserviços com kubernets #
+
 Este repositório contém um exemplo de uma aplicação em microserviço. A aplicação contém 3 projetos, sendo um deles utilizando o graphql como pi gatewai. Os outros dois, um deles em kotlin e o outro em Java. Ambos usam o SpringBoot. Para executar os comandos abaixo deve-se, antes, instalar o minikube localmente no computador:
 	- https://kubernetes.io/docs/tasks/tools/install-minikube/
 
-# Kubernets
+## Kubernets ##
 
 	Inicia minikube: 
 		minikube start -p microservico --insecure-registry local-registry:5000 --memory 4096 --cpus 4
@@ -25,7 +27,7 @@ Este repositório contém um exemplo de uma aplicação em microserviço. A apli
 		minikube -p microservico service stock-deployment --url
 
 	--------------------------------------------------
-# Rabbit
+## Rabbit ##
 		Install Helm 
 			curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh
 			chmod 700 get_helm.sh
@@ -46,13 +48,13 @@ Este repositório contém um exemplo de uma aplicação em microserviço. A apli
 	    		kubectl port-forward --namespace default svc/falling-grasshopper-rabbitmq 15672:15672
 	    		echo "URL : http://127.0.0.1:15672/"
 
-# SpringBoot
+## SpringBoot ##
 
 		kubectl apply -f kubernets/stock.yaml
 		kubectl apply -f kubernetsecommerce.yaml
 		kubectl apply -f kubernets/graphql.yaml
 
-# Extras:
+## Extras: ##
 		Log
 			kubectl logs -f --tail=20 <pod name>
 
