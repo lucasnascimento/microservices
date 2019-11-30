@@ -1,0 +1,25 @@
+type Product {
+    id: ID!,
+    name: String,
+    description: String,
+    price: Float,
+    stock: Int
+}
+
+type History {
+    date: String,
+    transaction: String,
+    quantity: Int,
+    product: String
+}
+
+type Query {
+    product(idProduct: Int):Product
+    products:[Product]
+    history(idProduct: Int):[History]
+}
+
+type Mutation {
+    createProduct(name: String!, price: Float!, description: String, stock: Int!): Int
+    saleProduct(productId: Int!, amount: Int!):Boolean
+}

@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ecommerce
+  labels:
+    app: ecommerce
+spec:
+  type: NodePort
+  ports:
+    - port: 8082
+      name: ecommerce
+  selector:
+    app: ecommerce
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecommerce
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ecommerce
+  template:
+    metadata:
+      labels:
+        app: ecommerce
+    spec:
+      containers:
+        - name: ecommerce
+          image: cubas/ecommerce
+          ports:
+            - containerPort: 8082
+          env:
+            - name: SPRING_RABBITMQ_HOST
+              value: falling-grasshopper-rabbitmq

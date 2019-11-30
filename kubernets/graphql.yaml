@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: graphql
+  labels:
+    app: graphql
+spec:
+  type: NodePort
+  ports:
+    - port: 8083
+      name: preferences
+      nodePort: 30400
+      protocol: TCP
+      targetPort: 8083
+  selector:
+    app: graphql
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: graphql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: graphql
+  template:
+    metadata:
+      labels:
+        app: graphql
+    spec:
+      containers:
+      - name: graphql
+        image: cubas/graphql:latest
+        ports:
+        - containerPort: 8083
+        env:
+        - name: STOCK_URL
+          value: http://stock:8081
+        - name: ECOMMERCE_URL
+          value: http://ecommerce:8082

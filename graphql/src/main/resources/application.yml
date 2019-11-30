@@ -1,0 +1,8 @@
+server:
+  port: 8083
+
+ecommerce:
+  url: http://localhost:8082
+
+stock:
+  url: http://localhost:8081
