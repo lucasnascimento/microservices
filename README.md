@@ -3,7 +3,7 @@
 Este repositório contém um exemplo de uma aplicação simples de ecommerce em microserviço. A aplicação contém 3 projetos. O primeiro se cham graphql e utiliza o [Graphql](https://graphql.org/) como uma [Api Gatewai](https://microservices.io/patterns/apigateway.html). Os outros dois, um deles em kotlin chamado stock e o outro em Java que é o ecommerce. Ambos usam o SpringBoot. O projeto utiliza o [RabbitMq](https://www.rabbitmq.com/) para gerenciar a troca de mensagens entre os serviços. Para executar os comandos abaixo deve-se, antes, instalar o [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) localmente no computador:
 
 ## Dockers ##
-	O Kubernets é um orquestrador de containers. Com isso, antes de executar os testes, devemos criá-los através dos docker. 
+O Kubernets é um orquestrador de containers. Com isso, antes de executar os testes, devemos criá-los através dos docker. 
 
 	 cd ecommerce/ && ./gradlew build && docker build -t cubas/ecommerce:latest . && cd ..
 	 cd stock/ && ./gradlew build && docker build -t cubas/stock:latest . && cd ..
