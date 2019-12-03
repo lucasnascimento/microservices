@@ -6,11 +6,9 @@ Este repositório contém um exemplo de uma aplicação simples de ecommerce em 
 Para testar o exemplo, antes, deve-se gerar os dockers de cada microserviço:
 	 iremos gerar três dockers:
 
-	 <code>
 	 - cd ecommerce/ && ./gradlew build && docker build -t cubas/ecommerce:latest . && cd ..
 	 - cd stock/ && ./gradlew build && docker build -t cubas/stock:latest . && cd ..
 	 - cd graphql/ && ./gradlew build && docker build -t cubas/graphql:latest . && cd ..
-	 </code>
 	
 ## Kubernets ##
 
